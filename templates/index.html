@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1px" cellspacing="0"  >
+    <tr>
+        <th>ID</th>
+        <th>用户名</th>
+        <th>密码</th>
+        <th>电话</th>
+        <th>注册日期</th>
+        <th>是否启用</th>
+    </tr>
+    {% for user in users %}
+        <tr>
+        <td>{{ user.userid }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.password }}</td>
+        <td>{{ user.phone }}</td>
+        <td>{{ user.date }}</td>
+        <td>{{ user.is_delete }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
